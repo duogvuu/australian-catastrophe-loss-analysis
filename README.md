@@ -15,18 +15,18 @@ Companion project: [Australian General Insurance Performance Dashboard](https://
 1. **Most of the rise in reported losses is inflation and exposure growth.**
    Average annual reported losses grew about **50-fold** from the 1970s to the 2020s,
    but only about **27%** once losses are normalised to 2022 prices and exposure.
-2. **Hail is Australia's costliest natural peril.** It caused **$39.0bn** of
+2. **Hail is Australia's costliest natural peril.** It caused **\$39.0bn** of
    normalised losses from just 36 events, about the same as cyclones from 73 events.
-   One in three hail events exceeded $1bn, driven by storms over Sydney and Brisbane.
+   One in three hail events exceeded \$1bn, driven by storms over Sydney and Brisbane.
 3. **Queensland and NSW carry over two-thirds of single-state losses**, through
    different perils: cyclones and floods in Queensland, hail in NSW, bushfire in
    Victoria and Tasmania. Western Australia has many events (53) but only one
-   above $1bn.
+   above \$1bn.
 4. **Large catastrophes have been more frequent since the late 2000s, but the
    long-run trend is not statistically significant.** A Poisson regression estimates
-   **+0.6% per year** (95% CI −0.3% to +1.5%) for events above $100m.
+   **+0.6% per year** (95% CI −0.3% to +1.5%) for events above \$100m.
 5. **Losses are heavy-tailed, and the choice of tail model matters.** The 10 largest
-   events account for **32%** of all losses. The implied frequency of a $5bn event
+   events account for **32%** of all losses. The implied frequency of a \$5bn event
    ranges from 1-in-4 to 1-in-24 years across three models; a lognormal truncated
    at the data threshold best matches the observed record (about **1-in-13 years**).
 
@@ -40,13 +40,13 @@ All dollar figures are normalised to 2022 values unless stated otherwise.
 
 | Average annual loss | 1970s | 2020s | Change |
 |---|---|---|---|
-| Original (as reported) | $0.07bn | $3.48bn | ~50× |
-| CPI-adjusted (2022 prices) | $0.64bn | $3.45bn | ~5× |
-| Normalised (2022 prices and exposure) | $2.84bn | $3.62bn | +27% |
+| Original (as reported) | \$0.07bn | \$3.48bn | ~50× |
+| CPI-adjusted (2022 prices) | \$0.64bn | \$3.45bn | ~5× |
+| Normalised (2022 prices and exposure) | \$2.84bn | \$3.62bn | +27% |
 
 Comparing raw insured losses over time mostly measures growth in prices and in the
 amount of insured property at risk. On a normalised basis, the 2010s and 2020s
-(about $3.6bn a year) are still around 75% above the 1980s–2000s average, which
+(about \$3.6bn a year) are still around 75% above the 1980s–2000s average, which
 Question 4 tests more formally. The 1960s figure covers only 1967–69, a period that
 includes two of the costliest events on record.
 
@@ -56,7 +56,7 @@ includes two of the costliest events on record.
 
 Hail, cyclones and floods together account for about two-thirds of normalised
 losses. Hail ranks first because of severity, not frequency: the average hail event
-costs $1.1bn, roughly twice the average cyclone or flood, because major hailstorms
+costs \$1.1bn, roughly twice the average cyclone or flood, because major hailstorms
 have hit densely populated capital cities. Most cyclones make landfall on sparsely
 populated northern coasts.
 
@@ -73,16 +73,16 @@ large rain systems and river catchments such as the Murray–Darling cross state
 
 ![Large event frequency](reports/figures/04_large_event_frequency.png)
 
-Counts of events above $100m are modelled with a **Poisson regression** (a GLM with a
-log link). The $100m threshold was chosen in advance because small events are more
+Counts of events above \$100m are modelled with a **Poisson regression** (a GLM with a
+log link). The \$100m threshold was chosen in advance because small events are more
 completely recorded in recent decades; other thresholds are a sensitivity check.
 
 | Threshold | Events | Per year | Annual trend | 95% CI | p-value |
 |---|---|---|---|---|---|
-| $100m (main) | 179 | 3.03 | +0.6% | −0.3% to +1.5% | 0.17 |
-| $250m | 117 | 1.98 | +1.1% | +0.0% to +2.2% | 0.05 |
-| $500m | 74 | 1.25 | +1.3% | −0.0% to +2.7% | 0.06 |
-| $1bn | 43 | 0.73 | +1.4% | −0.4% to +3.3% | 0.12 |
+| \$100m (main) | 179 | 3.03 | +0.6% | −0.3% to +1.5% | 0.17 |
+| \$250m | 117 | 1.98 | +1.1% | +0.0% to +2.2% | 0.05 |
+| \$500m | 74 | 1.25 | +1.3% | −0.0% to +2.7% | 0.06 |
+| \$1bn | 43 | 0.73 | +1.4% | −0.4% to +3.3% | 0.12 |
 
 The direction is consistent across thresholds, but the evidence is weak over the
 full record. The 10-year average is broadly flat until the late 2000s and then rises,
@@ -96,15 +96,15 @@ not mean no change: with 59 years of data, a real trend could easily go undetect
 Return periods (years) implied by combining the observed frequency of large events
 with three severity models:
 
-| Event loss | Observed | Pareto | Lognormal (ignoring threshold) | Lognormal (truncated at $100m) |
+| Event loss | Observed | Pareto | Lognormal (ignoring threshold) | Lognormal (truncated at \$100m) |
 |---|---|---|---|---|
-| $1bn | 1.4 | 1.4 | 1.3 | 1.4 |
-| $2bn | 2.6 | 2.2 | 3.5 | 3.2 |
-| $5bn | 9.8 | 4.0 | 24.3 | 12.8 |
-| $10bn | not yet observed | 6.1 | 165.1 | 46.9 |
+| \$1bn | 1.4 | 1.4 | 1.3 | 1.4 |
+| \$2bn | 2.6 | 2.2 | 3.5 | 3.2 |
+| \$5bn | 9.8 | 4.0 | 24.3 | 12.8 |
+| \$10bn | not yet observed | 6.1 | 165.1 | 46.9 |
 
-The models agree around $1bn but diverge in the tail. The Pareto model overstates
-extreme losses, while a lognormal fitted without accounting for the $100m data
+The models agree around \$1bn but diverge in the tail. The Pareto model overstates
+extreme losses, while a lognormal fitted without accounting for the \$100m data
 threshold understates them. For reinsurance and capital planning, the tail is what
 matters, and the treatment of data thresholds can change the answer several-fold.
 
@@ -166,9 +166,9 @@ flowchart LR
 - **Normalisation is a model.** ICA's normalisation may not capture every change in
   exposure, building standards or insurance take-up.
 - **Recording completeness** has improved over time, so counts of small events are
-  not comparable across decades; frequency analysis uses a $100m threshold.
+  not comparable across decades; frequency analysis uses a \$100m threshold.
 - **Short record for rare events.** Fewer than 60 years of data make tail and trend
-  estimates uncertain; only six events exceed $5bn.
+  estimates uncertain; only six events exceed \$5bn.
 - **Multi-state losses cannot be split** between states, so state totals understate
   exposure for states often hit by multi-state events.
 - **Event-level view.** Severity models describe single events; annual aggregate
